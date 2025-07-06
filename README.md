@@ -1,7 +1,4 @@
-# 🎯 Perplexity Guided‑Missile — VI/EN Hallucination Harness
-
-> “Measure first, then obliterate the error.”  
-> *Built by Khoa as Missile #1 of 3 on 26 Jun 2025.*
+# 🎯 VI/EN Hallucination Harness
 
 [▶ 90‑second Loom demo](https://www.loom.com/share/5bdfbfba770a4574bff589c56d3ec417?sid=3d66ecea-2c81-462e-b1ab-06af4e2deb7d)
 
@@ -20,8 +17,8 @@ The code is structured so Perplexity engineers can swap in bigger Sonar models o
 
 ```bash
 # 1 clone & install
-git clone https://github.com/<your‑handle>/perplexity-guided-missile.git
-cd perplexity-guided-missile
+git clone https://github.com/minhkhoango/perplexity-hallucination-harness.git
+cd perplexity-hallucination-harness
 poetry install
 
 # 2 add secrets
