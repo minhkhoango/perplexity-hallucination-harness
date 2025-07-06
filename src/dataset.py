@@ -1,21 +1,26 @@
 import json
 from pathlib import Path
-from typing import TypedDict, Generator
+from typing import Generator, TypedDict
+
 
 class QAItem(TypedDict):
     """A typed dictionary representing a Question-Answer pair."""
+
     question: str
     answer: str
 
+
 def load_qa_dataset(path: Path) -> Generator[QAItem, None, None]:
-    """
-    Loads the question-answer dataset from a JSONL file.
+    """Load the question-answer dataset from a JSONL file.
 
     Args:
+    ----
         path: The path to the .jsonl file.
-        
+
     Yields:
+    ------
         A generator of QAItem objects.
+
     """
     if not path.exists():
         raise FileNotFoundError(f"Dataset not found at path: {path}")
@@ -28,5 +33,7 @@ def load_qa_dataset(path: Path) -> Generator[QAItem, None, None]:
                     data: QAItem = json.loads(line)
                     yield data
                 except (json.JSONDecodeError, KeyError) as e:
-                    print(f"Warning: Skipping malformed line: {line.strip()} | Error: {e}")
+                    print(
+                        f"Warning: Skipping malformed line: {line.strip()} | Error: {e}"
+                    )
                     continue

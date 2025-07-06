@@ -1,14 +1,17 @@
 from typing import Sequence
 
+
 def hallucination_rate(results: Sequence[bool]) -> float:
-    """
-    Calculates the hallucination rate as a percentage.
+    """Calculate the hallucination rate as a percentage.
 
     Args:
+    ----
         results: A sequence of booleans, where True indicates a hallucination.
 
     Returns:
+    -------
         The percentage of hallucinations. Returns 0.0 if the sequence is empty.
+
     """
     if not results:
         return 0.0
